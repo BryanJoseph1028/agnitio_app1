@@ -11,7 +11,6 @@ class camera extends StatefulWidget {
   
 }
 
-
 class _cameraState extends State<camera> {
 
 
