@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class dashboard extends StatelessWidget {
@@ -16,11 +15,13 @@ class dashboard extends StatelessWidget {
   ];
 
   List Tittles =[
-    "Captura",
-    "Historial",
-    "registration",
-    "usuario",
+    "Capturar",
+    "Capturar",
+    "capturar",
+    "capturar",
   ];
+
+
 
   height = MediaQuery.of(context).size.height;
   width = MediaQuery.of(context).size.width;
@@ -49,9 +50,33 @@ class dashboard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       InkWell(
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pushNamed(context, "/login");
+                        },
                         child: Icon(
                           Icons.ac_unit_rounded,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                      ),
+                        Container(
+                          height: 40,
+                          width: 40, 
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15), 
+                            color: Colors.white,
+                            image: DecorationImage(
+                              image: AssetImage("images/user.png"),
+                            ),
+                          ),
+                        ),
+
+                        InkWell(
+                        onTap: (){
+                          Navigator.pushNamed(context, "/historial");
+                        },
+                        child: Icon(
+                          Icons.panorama_photosphere_outlined,
                           color: Colors.white,
                           size: 40,
                         ),
@@ -122,7 +147,9 @@ class dashboard extends StatelessWidget {
                   itemCount: imgData.length,
                   itemBuilder: (context, index){
                     return InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.pushNamed(context, "/camera_page");
+                      },
                     child: Container(
                       margin: EdgeInsets.symmetric(vertical: 8, horizontal:20),
                       decoration: BoxDecoration(

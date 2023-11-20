@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-
-class camera extends StatefulWidget {
-  const camera({super.key});
+class camera_page extends StatefulWidget {
+  const camera_page({super.key});
 
   @override
-  State<camera> createState() => _cameraState();
-  
+  State<camera_page> createState() => _camera_pageState();
 }
 
-class _cameraState extends State<camera> {
-
+class _camera_pageState extends State<camera_page> {
 
 File? image = null;  
 final picker = ImagePicker();
@@ -90,9 +87,9 @@ final picker = ImagePicker();
       }
     );
   }
-
+  
   @override
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Bienvenido a la camara"),

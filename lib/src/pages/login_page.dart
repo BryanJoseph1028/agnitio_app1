@@ -84,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
         onPressed: (){
           debugPrint("Correo Electronico"+UsernameController.text);
           debugPrint("Contraseña"+PasswordController.text);
+          Navigator.pushNamed(context, "/dashboard");
         }, 
         child: const SizedBox(
           width: double.infinity,

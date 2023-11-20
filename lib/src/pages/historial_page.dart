@@ -10,15 +10,33 @@ class historial extends StatefulWidget {
 class _historialState extends State<historial> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Historial"),
-      ),
-      body: Center(
-        child: Container(
-          child: Text("holamundo"),
+    return ListView(
+      children: <Widget>[
+        ListTile(
+          leading: Icon(Icons.camera),
+          title: Text('serrucho'),
         ),
-      ),
+        ListTile(
+          leading: Icon(Icons.camera),
+          title: Text('martillo'),
+        ),
+        ListTile(
+          leading: Icon(Icons.camera),
+          title: Text('tornillo'),
+        ),
+        ListTile(
+          leading: Icon(Icons.camera),
+          title: Text('aceite'),
+        ),
+        ListTile(
+          leading: Icon(Icons.camera),
+          title: Text('sierra para metal'),
+        ),
+        ListTile(
+          leading: Icon(Icons.camera),
+          title: Text('Thiner'),
+        ),
+      ],
     );
   }
 }
